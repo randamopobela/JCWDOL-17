@@ -40,13 +40,21 @@ console.log(result);
 // Write a code to print the first N fibonacci numbers
 // Example: 15 → 610
 // 1,1,2,3,5,8,13, 21,
+// 0,1,1,2,3,5
 number = 15;
-let temp1 = 0,
-  temp2 = 1;
-for (let i = 1; i < number; ++i) {
-  result = temp1 + temp2;
-  temp1 = temp2;
-  temp2 = result;
+let temp1 = 0, // 3
+  temp2 = 1; // 5
+
+//butuh 3 parameter
+//number => jumlah brp banyak looping
+//result => menampung hasil
+//temp1 => menyimpan value kedua sebelum angka yg dicari
+//temp2 => menyimpan value pertama sebelum angka yg dicari
+
+for (let i = 1; i < number; i++) {
+  result = temp1 + temp2; // 5
+  temp1 = temp2; // 3
+  temp2 = result; // 5
 }
 
 console.log(result);

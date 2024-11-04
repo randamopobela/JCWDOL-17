@@ -69,3 +69,50 @@ console.log(capitalize);
 // i=5 adalah " "
 //i = 6. maka "w"
 // 6-1 =5. karakter 5 itu adalah " " maka true
+
+// Write a code to swap the case of each character from string
+// Example : ‘The QuiCk BrOwN Fox’ -> ‘ tHE qUIcK bRoWn fOX’
+str = "The QuiCk BrOwN Fox";
+let swap: string = "";
+for (let i = 0; i < str.length; i++) {
+  if (str.charAt(i).toUpperCase() == str.charAt(i))
+    swap += str.charAt(i).toLowerCase();
+  else swap += str.charAt(i).toUpperCase();
+}
+console.log(swap);
+
+// Write a code to find the largest of two given integers
+// Example : num1 = 42, num2 = 27 → 42
+let num1: number = 42;
+let num2: number = 27;
+console.log(num1 > num2 ? num1 : num2); //ternary
+
+// Write a conditional statement to sort three numbers
+// Example : num1 = 42, num2 = 27, num3 = 18 → 18, 27, 42
+let num3: number = 18;
+let result: string = `num1 = ${num1}, num2 = ${num2}, num3 = ${num3} →`;
+if (num1 > num2) [num1, num2] = [num2, num1]; //reassign
+if (num1 > num3) [num1, num3] = [num3, num1];
+if (num2 > num3) [num2, num3] = [num3, num2];
+
+console.log(result, num1, num2, num3);
+
+// Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
+// Example : “hello” → 1
+str = "hello";
+if (typeof str == "string") console.log(1);
+else if (typeof str == "number") console.log(2);
+else console.log(3);
+
+// Write a code to change every letter a into * from a string of input
+// Example : ‘An apple a day keeps the doctor away’ -> `*n *pple * d*y keeps the doctor *w*y`
+str = "An apple a day keeps the doctor away";
+console.log(str.replace(/a/gi, "*"));
+//g = global
+//i = in case sensitive
+console.log(str.toLowerCase().replaceAll("a", "*"));
+
+let a = "ayam";
+let b = "kucing";
+[a, b] = [b, a];
+console.log(a, b);
