@@ -77,3 +77,35 @@ console.log("Hasil soal 3:", anagram(s, t));
 // let n: number = 2;
 
 // console.log(climbing(n));
+
+// Soal Bonus
+// Create a function to show try style of triangle
+// ● Example:
+// ***
+// **
+// *
+//
+// *
+// **
+// ***
+//
+// ***
+//  **
+//   *
+//
+//   *
+//  **
+// ***
+
+const triangle = (n: number) => {
+    let result: string = "";
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+            result += "*";
+        }
+        result += "\n";
+    }
+    console.log(result);
+};
+
+triangle(4);
