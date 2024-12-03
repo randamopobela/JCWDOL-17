@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     background-color: black;
@@ -10,4 +11,19 @@ body {
 
 #componentA {
     color: green;
+=======
+/** @format */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.blue {
+  color: blue;
+}
+
+#componentA {
+  color: green;
+>>>>>>> master
 }

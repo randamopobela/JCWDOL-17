@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+/** @format */
+
+>>>>>>> master
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,3 +25,30 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+=======
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  position: sticky;
+  top: 0;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+@layer base {
+  a {
+    @apply underline bg-black
+    /* cara menggunakan class tailwind untuk external css */;
+  }
+}
+>>>>>>> master

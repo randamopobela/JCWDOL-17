@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+/** @format */
+
+>>>>>>> master
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -26,6 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+<<<<<<< HEAD
+=======
+        hello
+>>>>>>> master
         {children}
       </body>
     </html>
