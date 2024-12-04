@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": "i",
+            "first_name": "budi",
+            "last_name": "doremi",
+            "email": "budi.doremi@gmail.com"
+        },
+        {
+            "id": "j",
+            "first_name": "randa",
+            "last_name": "mopobela",
+            "email": "randa@mail.com"
+        }
+    ]
+}

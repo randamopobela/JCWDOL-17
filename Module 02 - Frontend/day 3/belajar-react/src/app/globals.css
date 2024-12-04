@@ -27,3 +27,11 @@ body {
   color: green;
 >>>>>>> master
 }
+
+a[href] {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 10px;
+}

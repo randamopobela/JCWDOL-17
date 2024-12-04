@@ -15,7 +15,7 @@ export default function Home() {
 =======
 /** @format */
 
-import { ComponentA, ComponentB, ComponentC } from "./components";
+import { ComponentA, ComponentB, ComponentC } from "../components";
 
 export default function Home() {
   return (
