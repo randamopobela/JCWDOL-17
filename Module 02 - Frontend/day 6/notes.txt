@@ -13,7 +13,7 @@ useMemo =       hooks yang digunakan untuk meningkatkan performance (memorized).
 useCallback =   hooks yang digunakan untuk me-memorized sebuah function. by default function akan dire-declare apabila terjadi re-render. apabila function tsb dikirim melalui props.
                 maka component yang memiliki props tersebut akan ikut ke-render sehingga membuat performance menurun
 useContext  =   hooks untuk menggunakan globalstate.
-useReducer  =   hooks yang digunakan untuk menjalan sebuah function hooks, dimana perubahan return diatur oleh sebuah kondisi.
+useReducer  =   hooks yang digunakan untuk menjalan sebuah function hooks, dimana perubahan state diatur oleh sebuah kondisi.
 customHook  =   hooks kita buat sendiri. bentuknya sebuah function
 
 local state =   adalah penggunaan state secara local. state dideclare di dalam sebuah component dan hanya bisa digunakan oleh component tsb dan children component(state yang dipass lewat props).
