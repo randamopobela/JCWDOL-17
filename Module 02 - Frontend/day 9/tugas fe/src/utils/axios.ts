@@ -1,9 +1,7 @@
-/** @format */
-
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:2000",
+    baseURL: "http://localhost:2000",
 });
 
 // api.get("/products")

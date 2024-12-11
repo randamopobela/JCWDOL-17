@@ -1,5 +1,5 @@
-/** @format */
 "use client";
+
 import { useEffect, useState } from "react";
 
 import { IProduct } from "@/interfaces/product.interface";
@@ -19,27 +19,27 @@ import CarouselComponent from "@/components/carousel.component";
 // student diperbolehkan melakukan perubahan style,design,menambah page dll
 
 export default function Home() {
-  const [products, setProducts] = useState<Array<IProduct>>([]);
-  useEffect(() => {
-    const fetch = async () => {
-      try {
-        const res = await api.get("/products");
-        setProducts(res.data);
-      } catch (error) {
-        throw error;
-      }
-    };
-    fetch();
-  }, []);
-  return (
-    <div className="flex flex-col items-center gap-7">
-      <CarouselComponent />
+    const [products, setProducts] = useState<Array<IProduct>>([]);
+    useEffect(() => {
+        const fetch = async () => {
+            try {
+                const res = await api.get("/products");
+                setProducts(res.data);
+            } catch (error) {
+                throw error;
+            }
+        };
+        fetch();
+    }, []);
+    return (
+        <div className="flex flex-col items-center gap-7">
+            <CarouselComponent />
 
-      <div className="grid grid-cols-5 max-w-screen-xl gap-2">
-        {products.map((product, key) => (
-          <CardComponent {...product} key={key} />
-        ))}
-      </div>
-    </div>
-  );
+            <div className="grid grid-cols-5 max-w-screen-xl gap-2">
+                {products.map((product, key) => (
+                    <CardComponent {...product} key={key} />
+                ))}
+            </div>
+        </div>
+    );
 }

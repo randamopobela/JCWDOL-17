@@ -1,9 +1,7 @@
-/** @format */
-
 import React from "react";
 
 type Props = {};
 
 export default function page({}: Props) {
-  return <div>login</div>;
+    return <div>login</div>;
 }
