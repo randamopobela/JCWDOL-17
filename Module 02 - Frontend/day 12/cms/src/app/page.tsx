@@ -3,6 +3,8 @@ import {
     TypeBlogPostSkeleton,
     IContentfulAsset,
 } from "@/contentful/types/blogPost.types";
+import Image from "next/image";
+import Link from "next/link";
 
 const getBlogPostsContenful = async () => {
     try {
@@ -24,17 +26,23 @@ export default async function Home() {
             {posts &&
                 posts.items?.map((blog, idx) => (
                     <div key={idx}>
-                        <p>{blog.fields.title}</p>
-                        <img
-                            src={`https:${
-                                (blog.fields.image as IContentfulAsset)?.fields
-                                    .file.url
-                            }`}
-                            alt=""
-                        />
-                        {/*Untuk mengambil data gambar perlu menggunakan
+                        <Link href={`article/${blog.fields.slug}`}>
+                            <div className="card">
+                                <Image
+                                    src={`https:${
+                                        (blog.fields.image as IContentfulAsset)
+                                            ?.fields.file.url
+                                    }`}
+                                    alt="gambar"
+                                    width={480}
+                                    height={480}
+                                />
+                                {/*Untuk mengambil data gambar perlu menggunakan
                         IContenfulAsset*/}
-                        <p>{blog.fields.slug}</p>
+                                <p>{blog.fields.title}</p>
+                                <p>{blog.fields.slug}</p>
+                            </div>
+                        </Link>
                     </div>
                 ))}
         </div>
