@@ -23,33 +23,16 @@ export default async function Home() {
 
     return (
         <div>
-            <header className="sticky z-10">
+            <header>
                 <Navbar />
             </header>
 
-            <main className="flex pt-20">
+            <main className="flex pt-40 mx-6">
                 <div className="flex justify-center gap-6 flex-wrap">
                     {posts &&
                         posts.items?.map((blog, idx) => (
                             <div key={idx}>
                                 <Link href={`article/${blog.fields.slug}`}>
-                                    {/* <div className="flex flex-wrap gap-2 -z-10">
-                                        <Image
-                                            src={`https:${
-                                                (
-                                                    blog.fields
-                                                        .image as IContentfulAsset
-                                                )?.fields.file.url
-                                            }`}
-                                            alt="gambar"
-                                            width={480}
-                                            height={480}
-                                        />
-                                        Untuk mengambil data gambar perlu menggunakan
-                        IContenfulAsset
-                                        <p>{blog.fields.title}</p>
-                                        <p>{blog.fields.slug}</p>
-                                    </div> */}
                                     <div>
                                         <div className="card bg-base-100 w-96 h-[480px] shadow-xl">
                                             <figure>
@@ -64,6 +47,7 @@ export default async function Home() {
                                                     width={384}
                                                     height={256}
                                                 />
+                                                {/* Untuk mengambil data gambar perlu menggunakan IContenfulAsset */}
                                             </figure>
                                             <div className="card-body h-56">
                                                 <h2 className="card-title font-bold">

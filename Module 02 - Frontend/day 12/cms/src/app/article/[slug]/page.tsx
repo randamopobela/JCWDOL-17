@@ -10,6 +10,7 @@ import contentfulClient from "@/contentful/contentfulClient";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import RichText from "@/components/global/RichText";
+import Navbar from "@/components/global/Navbar";
 
 export default function Article() {
     const params = useParams<{ slug: string }>();
@@ -36,25 +37,34 @@ export default function Article() {
 
     return (
         <div>
-            {article && (
-                <div>
-                    <div className="flex flex-col relative w-full">
-                        <Image
-                            src={`https:${
-                                (article?.image as IContentfulAsset)?.fields
-                                    .file.url
-                            }`}
-                            className="item-center"
-                            width={720}
-                            height={720}
-                            style={{ objectFit: "cover" }}
-                            alt="article-image"
-                        />
-                        <h1 className="text-3xl font-bold">{article?.title}</h1>
-                        <RichText document={article?.body} />
+            <header>
+                <Navbar />
+            </header>
+            <main className="flex pt-28 pb-8 mx-6 ">
+                {article && (
+                    <div className="flex justify-center w-full">
+                        <div className="flex flex-col justify-center gap-5 relative lg:w-1/2">
+                            <figure className="flex justify-center">
+                                <Image
+                                    src={`https:${
+                                        (article?.image as IContentfulAsset)
+                                            ?.fields.file.url
+                                    }`}
+                                    className="flex items-center justify-center"
+                                    width={720}
+                                    height={720}
+                                    style={{ objectFit: "cover" }}
+                                    alt="article-image"
+                                />
+                            </figure>
+                            <h1 className="text-3xl font-bold">
+                                {article?.title}
+                            </h1>
+                            <RichText document={article?.body} />
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </main>
         </div>
     );
 }

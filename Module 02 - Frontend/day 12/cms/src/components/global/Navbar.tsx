@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
         <nav>
-            <div className="navbar flex justify-evenly items-center">
+            <div className="navbar flex justify-evenly items-center fixed bg-base-100 top-0 z-50">
                 <div>
                     <div className="dropdown">
                         <div
