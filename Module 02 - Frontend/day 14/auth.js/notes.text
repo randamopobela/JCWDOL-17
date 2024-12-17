@@ -1,0 +1,7 @@
+1. Install Next.js untuk project baru
+2. install Auth.js untuk menggunakan authentication dari Auth.js
+3. Install Formik untuk validasi form
+4. Install json-server untuk local API
+
+- setting auth.js
+- setting json-server di package.json

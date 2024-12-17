@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "user-test",
+            "password": "password",
+            "email": "test@mail.com",
+            "image": "https://www.greenscene.co.id/wp-content/uploads/2020/09/Korra.jpg"
+        }
+    ]
+}

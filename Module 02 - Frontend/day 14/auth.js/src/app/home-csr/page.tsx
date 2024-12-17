@@ -1,8 +1,11 @@
+"use client";
 import Link from "next/link";
-import { auth } from "@/auth";
+import { useSession } from "next-auth/react";
 
 export default async function Home() {
-    const session = await auth();
+    const { data: session } = useSession();
+
+    // Jika menggunakan csr (client side rendering), komponen harus dibungkus dengan SessionProvider lewat layout.
     return (
         <div>
             {session?.user?.id ? (
