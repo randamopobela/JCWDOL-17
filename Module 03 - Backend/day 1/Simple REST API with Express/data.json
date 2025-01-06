@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "product_name": "sepeda pinarello",
+            "price": 130000000
+        },
+        {
+            "id": 2,
+            "product_name": "sepeda brompton",
+            "price": 30000000
+        },
+        {
+            "id": 3,
+            "product_name": "sepeda klasik",
+            "price": 340000
+        },
+        {
+            "id": 4,
+            "product_name": "sepeda fixie",
+            "price": 50000000
+        },
+        {
+            "id": 5,
+            "product_name": "sepeda bmx",
+            "price": 1400000
+        },
+        {
+            "id": 6,
+            "product_name": "sepeda mountain bike",
+            "price": 40000000
+        }
+    ]
+}
