@@ -3,6 +3,8 @@ import { products } from "./data.json";
 
 const app: Application = express();
 
+// app.use(express.json()); //menangkap req.body
+
 const PORT = 8000;
 
 // Akses GET ke route /
@@ -37,6 +39,58 @@ app.get("/search", (req: Request, res: Response) => {
         message: "fetching products",
         data,
     });
+});
+
+app.post("/products", (req: Request, res: Response) => {
+    try {
+        const id = products[products.length - 1].id + 1;
+        const { product_name, price } = req.body;
+        if (!product_name || !price)
+            throw new Error("Product name and price is required");
+
+        const newProduct = {
+            id,
+            product_name,
+            price,
+        };
+
+        products.push(newProduct);
+
+        res.send({
+            message: "Product has been added",
+            data: newProduct,
+        });
+    } catch (error) {
+        if (error instanceof Error) {
+            res.status(400).send({
+                message: error.message,
+            });
+        }
+    }
+});
+
+// Masih error di bagian method patch
+app.patch("/products/:id", (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const { product_name, price } = req.body;
+        const idx = products.findIndex((product) => product.id === Number(id));
+
+        if (idx === -1) throw new Error("Product not found");
+        if (product_name) products[idx].product_name = product_name;
+        if (price) products[idx].price = price;
+        // products[idx] = { ...products[idx], ...req.body };
+
+        res.send({
+            message: `product ${id} has been updated`,
+        });
+    } catch (error) {
+        if (error instanceof Error) {
+            res.status(404).send({
+                message: error.message,
+            });
+        }
+    }
 });
 
 // Menghapus product

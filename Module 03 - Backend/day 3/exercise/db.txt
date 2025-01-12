@@ -1,0 +1,73 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "title": "Belanja bulanan",
+            "nominal": 400000,
+            "typeId": 2,
+            "categoryId": 2,
+            "date": "2025-01-01"
+        },
+        {
+            "id": 2,
+            "title": "Service Motor",
+            "nominal": 180000,
+            "typeId": 2,
+            "categoryId": 3
+        },
+        {
+            "id": 3,
+            "title": "Gaji Bulanan",
+            "nominal": 1000000,
+            "typeId": 1,
+            "categoryId": 1
+        },
+        {
+            "id": 4,
+            "title": "Beli BBM",
+            "nominal": 250000,
+            "typeId": 2,
+            "categoryId": 3
+        },
+        {
+            "id": 5,
+            "title": "Bonus tahunan",
+            "nominal": 1500000,
+            "typeId": 1,
+            "categoryId": 1
+        },
+        {
+            "id": 6,
+            "title": "Beli kopi",
+            "nominal": 340000,
+            "typeId": 2,
+            "categoryId": 2
+        }
+    ],
+
+    "types": [
+        {
+            "id": 1,
+            "name": "income"
+        },
+        {
+            "id": 2,
+            "name": "expense"
+        }
+    ],
+
+    "categories": [
+        {
+            "id": 1,
+            "name": "salary"
+        },
+        {
+            "id": 2,
+            "name": "food"
+        },
+        {
+            "id": 3,
+            "name": "transport"
+        }
+    ]
+}
