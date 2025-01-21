@@ -1,0 +1,11 @@
+npm init --y
+
+npm i express @types/express --save
+
+tsc --init
+
+tambahkan "scripts": {
+    "dev": "nodemon index.ts",
+}
+
+npm i fs => menggunakan system untuk membaca file pada helper
