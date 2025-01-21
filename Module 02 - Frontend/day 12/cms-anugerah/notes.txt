@@ -1,0 +1,12 @@
+- Setelah install next.js, install package contentful = npm i contentful @contentful/rich-text-types @contentful/rich-text-react-renderer
+
+- Buat koneksi dengan contentful -> cek folder contentful -> contentfulClient.ts
+
+- Buat folder types di dalam folder contentful, buat file blogPost.types.ts. Fungsinya untuk type konten, karena pakai TypeScript harus ada type nya. Kalau pakai JavaScript tidak perlu.
+
+- 
+
+
+
+
+
