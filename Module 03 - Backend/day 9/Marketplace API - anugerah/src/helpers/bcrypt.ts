@@ -6,3 +6,5 @@ export const hashedPassword = async (
     const salt = await genSalt(numberSalt);
     return await hash(password, salt);
 };
+
+// npm i bcrypt @types/bcrypt
